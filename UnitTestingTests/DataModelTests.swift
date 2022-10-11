@@ -6,14 +6,19 @@
 //
 
 import XCTest
+@testable import UnitTesting
 
 class DataModelTests: XCTestCase {
+    
+    var sut: DataModel!
 
     override func setUp() {
         super.setUp()
+        sut = DataModel()
     }
 
     override func tearDown() {
+        sut = nil
         super.tearDown()
     }
 
@@ -23,6 +28,7 @@ class DataModelTests: XCTestCase {
 
     func testPerformanceExample() {
         measure {
+            sut.setVolume(to: 100)
         }
     }
 
