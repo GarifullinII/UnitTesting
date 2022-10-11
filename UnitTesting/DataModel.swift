@@ -14,5 +14,7 @@ class DataModel {
         volume = min(max(value, 0), 100)
     }
     
-    
+    func greaterThenValue(x:Int, y: Int) -> Bool {
+        x > y
+    }
 }

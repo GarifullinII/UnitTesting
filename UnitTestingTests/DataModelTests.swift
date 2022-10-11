@@ -50,4 +50,21 @@ class DataModelTests: XCTestCase {
 //        }
 //    }
 
+    func testNumberOneMustBeGreaterThenNumberTwo() {
+        let numberOne = 1
+        let numberTwo = 0
+        
+        let isGreater = sut.greaterThenValue(x: numberOne, y: numberTwo)
+        
+        XCTAssert(isGreater)
+    }
+    
+    func testNumberOneNotBeGreaterThenNumberTwo() {
+        let numberOne = 1
+        let numberTwo = 2
+        
+        let isGreater = sut.greaterThenValue(x: numberOne, y: numberTwo)
+        
+        XCTAssert(!isGreater)
+    }
 }
